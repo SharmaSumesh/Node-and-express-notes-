@@ -1,0 +1,37 @@
+const express = require("express");
+const app = express();
+app.get("/",function(req,res)
+{
+res.send("this is home page")
+})
+app.listen(4000,()=>{
+console.log("app is started");
+});
+
+how to creating routing in express:- 
+const express = require("express");
+const app = express();
+app.get("/",function(req,res)
+{
+res.send("this is home page")
+})
+app.get("/about",function(req,res)
+{
+res.send("this is About page")
+})
+app.get("/conatct",function(req,res)
+{
+res.send("this is Conatct us page")
+})
+app.get("*",function(req,res)
+{
+res.send("404 Not found")
+})
+app.listen(4000,()=>{
+console.log("app is started");
+});
+
+What is the synatx of send  res  in express 
+res.send("Hello my name is sumesh")
+What is the synatx of send  req  in express 
+req.send("");
